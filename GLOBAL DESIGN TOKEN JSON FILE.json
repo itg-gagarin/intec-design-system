@@ -1,5 +1,5 @@
 {
-  "global": {
+  "core": {
     "color": {
       "itg": {
         "signal-green": {
@@ -176,74 +176,84 @@
           "value": "#4f46e5",
           "type": "color"
         }
-      }
-    },
-    "brand": {
-      "advance": {
-        "value": "{color.itg.signal-green}",
-        "type": "color"
       },
-      "advance-hover": {
-        "value": "{color.itg.signal-green-hover}",
-        "type": "color"
-      },
-      "advance-ink": {
-        "value": "{color.itg.signal-green-ink}",
-        "type": "color"
-      },
-      "commit": {
-        "value": "{color.itg.commit-indigo}",
-        "type": "color"
-      },
-      "commit-hover": {
-        "value": "{color.itg.commit-indigo-hover}",
-        "type": "color"
-      },
-      "sales": {
-        "value": "{color.itg.sales-rose}",
-        "type": "color"
-      }
-    },
-    "text": {
-      "default": {
-        "value": "{color.itg.ink}",
-        "type": "color"
-      },
-      "muted": {
-        "value": "{color.itg.ink-muted}",
-        "type": "color"
-      },
-      "on-commit": {
-        "value": "{color.itg.surface-white}",
-        "type": "color"
-      },
-      "on-advance": {
-        "value": "{color.itg.signal-green-ink}",
-        "type": "color"
-      },
-      "on-tint": {
-        "value": "{color.itg.green-ink-on-tint}",
-        "type": "color"
-      }
-    },
-    "surface": {
-      "page": {
-        "value": "{color.itg.page-ground}",
-        "type": "color"
-      },
-      "card": {
-        "value": "{color.itg.surface-white}",
-        "type": "color"
-      },
-      "hover": {
-        "value": "{color.itg.row-hover}",
-        "type": "color"
-      }
-    },
-    "border": {
-      "default": {
-        "value": "{color.itg.hairline}",
-        "type": "color"
+      "dark": {
+        "page-ground": {
+          "value": "#0b0f1a",
+          "type": "color"
+        },
+        "surface-card": {
+          "value": "#141a29",
+          "type": "color"
+        },
+        "surface-2": {
+          "value": "#1c2436",
+          "type": "color"
+        },
+        "ink": {
+          "value": "#e8ecf3",
+          "type": "color"
+        },
+        "ink-muted": {
+          "value": "#94a3b8",
+          "type": "color"
+        },
+        "hairline": {
+          "value": "#2a3346",
+          "type": "color"
+        },
+        "row-hover": {
+          "value": "#1c2436",
+          "type": "color"
+        },
+        "chart-grid": {
+          "value": "#232c40",
+          "type": "color"
+        },
+        "signal-green": {
+          "value": "#8DC63F",
+          "type": "color"
+        },
+        "signal-green-hover": {
+          "value": "#9ed453",
+          "type": "color"
+        },
+        "signal-green-ink": {
+          "value": "#062c12",
+          "type": "color"
+        },
+        "green-ink-on-tint": {
+          "value": "#a5d84f",
+          "type": "color"
+        },
+        "green-tint": {
+          "value": "#1e2a12",
+          "type": "color"
+        },
+        "commit-indigo": {
+          "value": "#6366f1",
+          "type": "color"
+        },
+        "commit-indigo-hover": {
+          "value": "#7c7ff5",
+          "type": "color"
+        },
+        "sales-rose": {
+          "value": "#f43f5e",
+          "type": "color"
+        },
+        "status-amber": {
+          "value": "#f59e0b",
+          "type": "color"
+        },
+        "status-emerald": {
+          "value": "#10b981",
+          "type": "color"
+        },
+        "status-red": {
+          "value": "#ef4444",
+          "type": "color"
+        }
       }
     },
     "radius": {
@@ -307,6 +317,28 @@
       },
       "12": {
         "value": "48",
+        "type": "spacing"
+      }
+    },
+    "spacing-alias": {
+      "cell": {
+        "value": "{spacing.2}",
+        "type": "spacing"
+      },
+      "gap": {
+        "value": "{spacing.3}",
+        "type": "spacing"
+      },
+      "card": {
+        "value": "{spacing.4}",
+        "type": "spacing"
+      },
+      "section": {
+        "value": "{spacing.6}",
+        "type": "spacing"
+      },
+      "page": {
+        "value": "{spacing.8}",
         "type": "spacing"
       }
     },
@@ -390,5 +422,212 @@
         "type": "lineHeights"
       }
     }
+  },
+  "light": {
+    "brand": {
+      "advance": {
+        "value": "{color.itg.signal-green}",
+        "type": "color"
+      },
+      "advance-hover": {
+        "value": "{color.itg.signal-green-hover}",
+        "type": "color"
+      },
+      "advance-ink": {
+        "value": "{color.itg.signal-green-ink}",
+        "type": "color"
+      },
+      "commit": {
+        "value": "{color.itg.commit-indigo}",
+        "type": "color"
+      },
+      "commit-hover": {
+        "value": "{color.itg.commit-indigo-hover}",
+        "type": "color"
+      },
+      "sales": {
+        "value": "{color.itg.sales-rose}",
+        "type": "color"
+      }
+    },
+    "text": {
+      "default": {
+        "value": "{color.itg.ink}",
+        "type": "color"
+      },
+      "muted": {
+        "value": "{color.itg.ink-muted}",
+        "type": "color"
+      },
+      "on-commit": {
+        "value": "{color.itg.surface-white}",
+        "type": "color"
+      },
+      "on-advance": {
+        "value": "{color.itg.signal-green-ink}",
+        "type": "color"
+      },
+      "on-tint": {
+        "value": "{color.itg.green-ink-on-tint}",
+        "type": "color"
+      }
+    },
+    "surface": {
+      "page": {
+        "value": "{color.itg.page-ground}",
+        "type": "color"
+      },
+      "card": {
+        "value": "{color.itg.surface-white}",
+        "type": "color"
+      },
+      "hover": {
+        "value": "{color.itg.row-hover}",
+        "type": "color"
+      }
+    },
+    "border": {
+      "default": {
+        "value": "{color.itg.hairline}",
+        "type": "color"
+      }
+    },
+    "chart": {
+      "grid": {
+        "value": "{color.itg.chart-grid}",
+        "type": "color"
+      }
+    },
+    "status": {
+      "amber": {
+        "value": "{color.itg.status-amber}",
+        "type": "color"
+      },
+      "emerald": {
+        "value": "{color.itg.status-emerald}",
+        "type": "color"
+      },
+      "red": {
+        "value": "{color.itg.status-red}",
+        "type": "color"
+      }
+    }
+  },
+  "dark": {
+    "brand": {
+      "advance": {
+        "value": "{color.dark.signal-green}",
+        "type": "color"
+      },
+      "advance-hover": {
+        "value": "{color.dark.signal-green-hover}",
+        "type": "color"
+      },
+      "advance-ink": {
+        "value": "{color.dark.signal-green-ink}",
+        "type": "color"
+      },
+      "commit": {
+        "value": "{color.dark.commit-indigo}",
+        "type": "color"
+      },
+      "commit-hover": {
+        "value": "{color.dark.commit-indigo-hover}",
+        "type": "color"
+      },
+      "sales": {
+        "value": "{color.dark.sales-rose}",
+        "type": "color"
+      }
+    },
+    "text": {
+      "default": {
+        "value": "{color.dark.ink}",
+        "type": "color"
+      },
+      "muted": {
+        "value": "{color.dark.ink-muted}",
+        "type": "color"
+      },
+      "on-commit": {
+        "value": "#ffffff",
+        "type": "color"
+      },
+      "on-advance": {
+        "value": "{color.dark.signal-green-ink}",
+        "type": "color"
+      },
+      "on-tint": {
+        "value": "{color.dark.green-ink-on-tint}",
+        "type": "color"
+      }
+    },
+    "surface": {
+      "page": {
+        "value": "{color.dark.page-ground}",
+        "type": "color"
+      },
+      "card": {
+        "value": "{color.dark.surface-card}",
+        "type": "color"
+      },
+      "hover": {
+        "value": "{color.dark.row-hover}",
+        "type": "color"
+      }
+    },
+    "border": {
+      "default": {
+        "value": "{color.dark.hairline}",
+        "type": "color"
+      }
+    },
+    "chart": {
+      "grid": {
+        "value": "{color.dark.chart-grid}",
+        "type": "color"
+      }
+    },
+    "status": {
+      "amber": {
+        "value": "{color.dark.status-amber}",
+        "type": "color"
+      },
+      "emerald": {
+        "value": "{color.dark.status-emerald}",
+        "type": "color"
+      },
+      "red": {
+        "value": "{color.dark.status-red}",
+        "type": "color"
+      }
+    }
+  },
+  "$themes": [
+    {
+      "id": "light",
+      "name": "Light",
+      "selectedTokenSets": {
+        "core": "source",
+        "light": "enabled",
+        "dark": "disabled"
+      }
+    },
+    {
+      "id": "dark",
+      "name": "Dark",
+      "selectedTokenSets": {
+        "core": "source",
+        "light": "disabled",
+        "dark": "enabled"
+      }
+    }
+  ],
+  "$metadata": {
+    "tokenSetOrder": [
+      "core",
+      "light",
+      "dark"
+    ]
   }
 }
