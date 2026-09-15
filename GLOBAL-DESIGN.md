@@ -82,7 +82,7 @@ Names say what a colour *does*, not what it looks like. Using one in the wrong p
 - **The Spent Colour Rule.** Every colour on a screen is state or ownership. If you cannot say which of the two it is doing, it should be slate.
 - **The One Green Rule.** Signal green marks advancing the lifecycle, one button per screen. A second green button means one of them is not really an advance.
 - **On-green contrast.** Text on signal green is always `#062c12`. White on green fails contrast and is forbidden.
-- **No dark mode** ships by default; the token structure supports adding one as a project.
+- **Dark mode** ships as a second token set (see §8). Semantic token names are identical across modes; only their values change.
 
 ---
 
@@ -219,9 +219,35 @@ House-to-`md` radius, white on the page ground, hairline border, **no shadow**. 
 - Use a pill shape for anything that is not a state or a count.
 - Hand-write a value that already has a token — a duplicated value is a defect even when it renders correctly.
 
----
+## 7. Dark mode
 
-## 7. Others
+Dark mode is a second token set, not a separate system. Every semantic token (`surface.card`, `text.default`, `brand.advance`…) keeps its **name** across modes; only its **value** changes. Components reference the semantic name, so nothing in a component needs editing to switch modes.
+
+### Palette
+
+| Semantic token | Light | Dark |
+|----------------|-------|------|
+| `surface.page` | `#f7f8fa` | `#0b0f1a` |
+| `surface.card` | `#ffffff` | `#141a29` |
+| `surface.hover` | `#f8fafc` | `#1c2436` |
+| `text.default` | `#0f1729` | `#e8ecf3` |
+| `text.muted` | `#64748b` | `#94a3b8` |
+| `border.default` | `#e2e8f0` | `#2a3346` |
+| `chart.grid` | `#eef2f7` | `#232c40` |
+| `brand.advance` | `#8DC63F` | `#8DC63F` (unchanged) |
+| `brand.commit` | `#4f46e5` | `#6366f1` (lifted) |
+| `brand.sales` | `#e11d48` | `#f43f5e` (lifted) |
+| `status.amber / emerald / red` | `#d97706 / #059669 / #dc2626` | `#f59e0b / #10b981 / #ef4444` (lifted) |
+
+### Rules for dark mode
+
+1. **Signal green does not change.** `#8DC63F` with dark green-ink text (`#062c12`) passes AA in both modes (contrast 7.5:1), so the Advance button is byte-for-byte identical light and dark. Changing it would weaken the one signal the system depends on.
+2. **Lift indigo, rose and status hues, don't darken them.** Saturated colours that read well on white go muddy on near-black; the dark set nudges them lighter/brighter so they keep the same *role strength*.
+3. **Surfaces get lighter as they get closer.** The page is the darkest layer (`#0b0f1a`); cards sit above it a step lighter (`#141a29`); hover/raised surfaces lighter still (`#1c2436`). Depth is still a step in value plus a 1px border — never a shadow.
+4. **The green-ink-on-tint flips to a light green.** Where light mode uses dark green on a pale wash, dark mode uses light green (`#a5d84f`) on a deep green wash (`#1e2a12`) — same relationship, inverted.
+5. **All body/label text must clear AA (4.5:1) on `surface.card`.** The dark ink (`#e8ecf3`) and muted (`#94a3b8`) are chosen to pass; if you introduce a new dark surface, re-check any text placed on it.
+
+## 8. Others
 
 
 1. **Icons** — install the official **Lucide** Figma plugin (24px grid, ~2px stroke) and use it as the single icon source so glyphs stay consistent across the platform.
