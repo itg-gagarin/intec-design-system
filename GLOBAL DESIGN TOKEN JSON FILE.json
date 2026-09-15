@@ -312,7 +312,7 @@
     },
     "fontFamilies": {
       "display": {
-        "value": "Cabinet Grotesk",
+        "value": "Inter",
         "type": "fontFamilies"
       },
       "body": {

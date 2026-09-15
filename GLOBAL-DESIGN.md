@@ -1,6 +1,6 @@
 # Global Design System
 
-A general-purpose UI foundation, skinned with the INTEC palette and type. This document is the written source of truth; the companion files are `design-system-ITG.svg` (visual reference / Figma layer source) and `design-tokens-ITG.json` (Tokens Studio import for linked Figma variables).
+A general-purpose UI foundation, skinned with the ITG palette and type. This document is the written source of truth; the companion files are `design-system-ITG.svg` (visual reference / Figma layer source) and `design-tokens-ITG.json` (Tokens Studio import for linked Figma variables).
 
 **North star.** Colour is spent, not spread. One green marks advancing work, one indigo marks saving inside a card, and everything else that is coloured is coloured because it means something — a state or an ownership. Depth comes from a 1px line, not a shadow. Surfaces are dense because the job is comparison.
 
@@ -12,21 +12,21 @@ A general-purpose UI foundation, skinned with the INTEC palette and type. This d
 
 | Role | Family | Weights | Use |
 |------|--------|---------|-----|
-| Display / Headings | Cabinet Grotesk | 500, 700 | Page titles, section headings, big stat numbers |
+| Display / Headings | Inter | 500, 600, 700 | Page titles, section headings, big stat numbers |
 | Body | IBM Plex Sans | 400, 500, 600, 700 | Everything textual — descriptions, labels, table content |
 | Numeric / Mono | IBM Plex Mono | 400, 500, 600 | Codes, quantities, money, dates in tables |
 
-Cabinet Grotesk has **no 600 weight** — use 500 or 700, never semibold. IBM Plex Sans and Mono are free (Google Fonts / IBM); Cabinet Grotesk is licensed separately from Indian Type Foundry and must be installed in Figma before headings render correctly.
+All three families are free (Google Fonts / IBM) and carry the full weight range used here, so headings render correctly without any separately-licensed font. Inter's optical spacing is tuned for UI, which is why it also carries the display and heading roles.
 
 ### Type scale
 
 | Token | Size | Line height | Weight | Family |
 |-------|------|-------------|--------|--------|
-| `display` | 36px | 120% | 700 | Cabinet Grotesk |
-| `h1` | 30px | 120% | 700 | Cabinet Grotesk |
-| `h2` | 24px | 130% | 500 | Cabinet Grotesk |
-| `h3` | 20px | 130% | 500 | Cabinet Grotesk |
-| `h4` | 18px | 140% | 500 | Cabinet Grotesk |
+| `display` | 36px | 120% | 700 | Inter |
+| `h1` | 30px | 120% | 700 | Inter |
+| `h2` | 24px | 130% | 600 | Inter |
+| `h3` | 20px | 130% | 600 | Inter |
+| `h4` | 18px | 140% | 600 | Inter |
 | `body` | 14px | 150% | 400 | IBM Plex Sans |
 | `small` | 13px | 150% | 400 | IBM Plex Sans |
 | `caption` | 12px | 150% | 400 | IBM Plex Sans |
@@ -219,8 +219,13 @@ House-to-`md` radius, white on the page ground, hairline border, **no shadow**. 
 - Use a pill shape for anything that is not a state or a count.
 - Hand-write a value that already has a token — a duplicated value is a defect even when it renders correctly.
 
-Others
-1. **Icons** — install the official **Lucide** Figma plugin (24px grid, ~2px stroke) and use it as the single icon source so glyphs stay consistent across the platform.
-2. **Fonts** — install Cabinet Grotesk, IBM Plex Sans and IBM Plex Mono in the workspace before reviewing headings.
+---
+
+## 7. Using these files in Figma
+
+1. **`design-system-ITG.svg`** — drag into a Figma frame for an editable, named-layer reference of every token and component.
+2. **`design-tokens-ITG.json`** — import via the free **Tokens Studio for Figma** plugin to get colours, spacing, radius and type as linked variables/styles.
+3. **Icons** — install the official **Lucide** Figma plugin (24px grid, ~2px stroke) and use it as the single icon source so glyphs stay consistent across the platform.
+4. **Fonts** — Inter, IBM Plex Sans and IBM Plex Mono are all free; enable them in the workspace (all three are on Google Fonts). No separately-licensed font is required.
 
 *Nothing enforces these rules automatically — they hold by convention and review, which is the reason for writing them down.*
