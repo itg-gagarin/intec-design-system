@@ -1,6 +1,6 @@
 # Global Design System
 
-A general-purpose UI foundation, skinned with the ITG palette and type. This document is the written source of truth; the companion files are `design-system-ITG.svg` (visual reference / Figma layer source) and `design-tokens-ITG.json` (Tokens Studio import for linked Figma variables).
+A general-purpose UI foundation. This document is the written source of truth.
 
 **North star.** Colour is spent, not spread. One green marks advancing work, one indigo marks saving inside a card, and everything else that is coloured is coloured because it means something — a state or an ownership. Depth comes from a 1px line, not a shadow. Surfaces are dense because the job is comparison.
 
@@ -221,11 +221,10 @@ House-to-`md` radius, white on the page ground, hairline border, **no shadow**. 
 
 ---
 
-## 7. Using these files in Figma
+## 7. Others
 
-1. **`design-system-ITG.svg`** — drag into a Figma frame for an editable, named-layer reference of every token and component.
-2. **`design-tokens-ITG.json`** — import via the free **Tokens Studio for Figma** plugin to get colours, spacing, radius and type as linked variables/styles.
-3. **Icons** — install the official **Lucide** Figma plugin (24px grid, ~2px stroke) and use it as the single icon source so glyphs stay consistent across the platform.
-4. **Fonts** — Inter, IBM Plex Sans and IBM Plex Mono are all free; enable them in the workspace (all three are on Google Fonts). No separately-licensed font is required.
+
+1. **Icons** — install the official **Lucide** Figma plugin (24px grid, ~2px stroke) and use it as the single icon source so glyphs stay consistent across the platform.
+2. **Fonts** — Inter, IBM Plex Sans and IBM Plex Mono are all free; enable them in the workspace (all three are on Google Fonts).
 
 *Nothing enforces these rules automatically — they hold by convention and review, which is the reason for writing them down.*
