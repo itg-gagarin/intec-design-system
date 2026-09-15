@@ -192,8 +192,8 @@ House-to-`md` radius, white on the page ground, hairline border, **no shadow**. 
 
 ### Charts & data viz
 
-- **Single series → signal green** (line, area fill at ~12% opacity, sparkline, progress ring, the one highlighted bar).
-- **Categorical → green, indigo, amber, rose, emerald** (max 5). For bar charts, prefer highlighting only the "current" bar in green and leaving the rest slate.
+- **Single series → signal green** (line, area fill at ~12% opacity, bar chart, sparkline, progress ring). Bars are all green; grey is reserved for gridlines.
+- **Categorical → green, indigo, amber, rose, emerald** (max 5). Use this only when a chart genuinely encodes categories by colour; a plain single-metric bar chart stays all green.
 - **Gridlines** are `#eef2f7`; **axes and labels** are slate.
 - Tooltips use the ink surface (`#0f1729`) with white text.
 
