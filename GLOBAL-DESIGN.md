@@ -196,7 +196,7 @@ House-to-`md` radius, white on the page ground, hairline border, **no shadow**. 
 - **Categorical → green, indigo, amber, rose, emerald** (max 5). Use this only when a chart genuinely encodes categories by colour; a plain single-metric bar chart stays all green.
 - **Gridlines** are `#eef2f7`; **axes and labels** are slate.
 - Tooltips use the ink surface (`#0f1729`) with white text.
-
+- Table should has pagination 10/20/50.
 > Note: the source system defined only the gridline colour for charts. The categorical palette above is a derived default following the Spent Colour Rule; if a canonical chart palette exists in code, use those values instead.
 
 ---
@@ -246,7 +246,9 @@ Dark mode is a second token set, not a separate system. Every semantic token (`s
 3. **Surfaces get lighter as they get closer.** The page is the darkest layer (`#0b0f1a`); cards sit above it a step lighter (`#141a29`); hover/raised surfaces lighter still (`#1c2436`). Depth is still a step in value plus a 1px border — never a shadow.
 4. **The green-ink-on-tint flips to a light green.** Where light mode uses dark green on a pale wash, dark mode uses light green (`#a5d84f`) on a deep green wash (`#1e2a12`) — same relationship, inverted.
 5. **All body/label text must clear AA (4.5:1) on `surface.card`.** The dark ink (`#e8ecf3`) and muted (`#94a3b8`) are chosen to pass; if you introduce a new dark surface, re-check any text placed on it.
+6. Any colour should be contrast to each other, between black and white, if label colour in black then text be white, then if label in white the text should be black.
 
+   
 ## 8. Others
 
 
