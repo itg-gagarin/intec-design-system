@@ -196,7 +196,7 @@ House-to-`md` radius, white on the page ground, hairline border, **no shadow**. 
 - **Categorical → green, indigo, amber, rose, emerald** (max 5). Use this only when a chart genuinely encodes categories by colour; a plain single-metric bar chart stays all green.
 - **Gridlines** are `#eef2f7`; **axes and labels** are slate.
 - Tooltips use the ink surface (`#0f1729`) with white text.
-- Table should has pagination 10/20/50.
+- Table should has pagination 10/20/50. And Freeze the header of the table
 > Note: the source system defined only the gridline colour for charts. The categorical palette above is a derived default following the Spent Colour Rule; if a canonical chart palette exists in code, use those values instead.
 
 ---
