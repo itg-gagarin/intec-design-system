@@ -254,6 +254,16 @@
           "value": "#ef4444",
           "type": "color"
         }
+      },
+      "neutral": {
+        "white": {
+          "value": "#ffffff",
+          "type": "color"
+        },
+        "black": {
+          "value": "#0f1729",
+          "type": "color"
+        }
       }
     },
     "radius": {
@@ -511,6 +521,32 @@
         "value": "{color.itg.status-red}",
         "type": "color"
       }
+    },
+    "on-color": {
+      "advance": {
+        "value": "{color.itg.signal-green-ink}",
+        "type": "color"
+      },
+      "commit": {
+        "value": "{color.neutral.white}",
+        "type": "color"
+      },
+      "sales": {
+        "value": "{color.neutral.white}",
+        "type": "color"
+      },
+      "amber": {
+        "value": "{color.neutral.black}",
+        "type": "color"
+      },
+      "emerald": {
+        "value": "{color.neutral.black}",
+        "type": "color"
+      },
+      "red": {
+        "value": "{color.neutral.white}",
+        "type": "color"
+      }
     }
   },
   "dark": {
@@ -599,6 +635,32 @@
       },
       "red": {
         "value": "{color.dark.status-red}",
+        "type": "color"
+      }
+    },
+    "on-color": {
+      "advance": {
+        "value": "{color.dark.signal-green-ink}",
+        "type": "color"
+      },
+      "commit": {
+        "value": "{color.neutral.white}",
+        "type": "color"
+      },
+      "sales": {
+        "value": "{color.neutral.black}",
+        "type": "color"
+      },
+      "amber": {
+        "value": "{color.neutral.black}",
+        "type": "color"
+      },
+      "emerald": {
+        "value": "{color.neutral.black}",
+        "type": "color"
+      },
+      "red": {
+        "value": "{color.neutral.black}",
         "type": "color"
       }
     }
