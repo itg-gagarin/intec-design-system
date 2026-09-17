@@ -73,6 +73,19 @@ Names say what a colour *does*, not what it looks like. Using one in the wrong p
 | `status-emerald` | `#059669` | Won / done / delivered. |
 | `status-red` | `#dc2626` | Overdue / refused. |
 
+### Text on a solid colour (`on-color.*`)
+
+Per Rule 6 (§7), text placed on a solid-coloured surface is pre-resolved to black or white by contrast, so components never guess. `on-color.advance` is the one branded exception — it keeps the near-black green-ink `#062c12` rather than pure black (still passes AA). Values differ by mode because the dark accents are lifted.
+
+| Token | On (fill) | Light text | Dark-mode text |
+|-------|-----------|-----------|----------------|
+| `on-color.advance` | signal green | `#062c12` (green ink) | `#062c12` |
+| `on-color.commit` | commit indigo | white | white |
+| `on-color.sales` | sales rose | white | black |
+| `on-color.amber` | status amber | black | black |
+| `on-color.emerald` | status emerald | black | black |
+| `on-color.red` | status red | white | black |
+
 ### Greyscale (slate)
 
 `0 #ffffff` · `50 #f7f8fa` · `100 #f1f5f9` · `200 #e2e8f0` · `300 #cbd5e1` · `400 #94a3b8` · `500 #64748b` · `600 #475569` · `700 #334155` · `800 #1e293b` · `900 #0f1729`
@@ -184,7 +197,7 @@ Checkbox, radio and toggle use **signal green** for the checked / selected / on 
 
 ### Status pills & badges
 
-Fully round, 1px border, a background/text/border triple per state. A pill means a state or a count — never merely "small". Count badges render only when the count is above zero (no empty circle), cap visibly at "9+", and choose text colour by measured contrast (amber uses dark ink; red is darkened).
+Fully round, 1px border, a background/text/border triple per state. A pill means a state or a count — never merely "small". The text on a solid-coloured pill comes from the `on-color.*` token for that colour, which is pre-resolved to black or white by contrast per Rule 6 (and differs by mode — e.g. red takes white text in light mode but black in dark, because the dark red is lifted). Count badges render only when the count is above zero (no empty circle), cap visibly at "9+".
 
 ### Cards & panels
 
